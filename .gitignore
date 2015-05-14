@@ -27,3 +27,5 @@ data/.~lock.WHO.csv#
 # various notes
 notes/
 genomes/
+crispr/
+crispr-hits/
