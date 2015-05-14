@@ -1,0 +1,10 @@
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=551115
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=329726
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=1266844
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634452
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634458
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634453
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634454
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634459
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634455
+http://crispr.u-psud.fr/cgi-bin/crispr/SpecieProperties.cgi?Taxon_id=634456
