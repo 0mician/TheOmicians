@@ -6,7 +6,7 @@ r = requests.get(url)
 data = r.text
 soup = BeautifulSoup(data)
 links = soup.findAll('a', href=True)
-bacteria_links = []
+bacteria_links = open('bacteria_links_crispr.txt', 'w')
 temp = []
 
 for link in links:
@@ -14,11 +14,6 @@ for link in links:
 
 for link in temp:
     if ('/cgi-bin/crispr/SpecieProperties.cgi' in link):
-        bacteria_links.append(link)
+        bacteria_links.write('http://crispr.u-psud.fr' + link + "\n")
 
-f = open('bacteria_links_crispr', 'w')
-
-for link in bacteria_links[0:10]:
-    f.write('http://crispr.u-psud.fr' + link + "\n")
-
-f.close()
+bacteria_links.close()

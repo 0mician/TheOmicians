@@ -1,0 +1,29 @@
+# Python files
+*.pyc
+ve/
+
+# emacs specific files
+
+auto-save-list
+custom.el
+url/
+.org-id-locations
+\#*
+org-mode-config.el
+*~
+.#*
+\#*\#
+*.log
+.DS_Store
+org-clock-save.el
+emacs-config.el
+
+# locks from libreoffice calc
+data/.~lock.WHO.csv#
+
+# vagrant folder
+.vagrant/
+
+# various notes
+notes/
+
