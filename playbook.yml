@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+    - name: update apt cache
+      apt: update_cache=yes
+    - name: install pip
+      apt: name=python-pip state=present
+    - name: install python-dev
+      apt: name=python-dev
+    - name: install python packages with pip
+      pip: requirements=/vagrant/requirements.txt
