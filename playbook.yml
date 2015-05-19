@@ -8,5 +8,15 @@
       apt: name=python-pip state=present
     - name: install python-dev
       apt: name=python-dev
-    - name: install python packages with pip
-      pip: requirements=/vagrant/requirements.txt
+    - name: Install python packages
+      apt: pkg={{item}} state=installed
+      with_items:
+      - python-beautifulsoup
+      - python-requests
+      - ipython
+    - name: Create crispr directory
+      file: path=/vagrant/CRISPR-Genomics/crispr state=directory
+    - name: Create genomes directory
+      file: path=/vagrant/CRISPR-Genomics/genomes state=directory
+    - name: Create crispr-hits directory
+      file: path=/vagrant/CRISPR-Genomics/crispr-hits state=directory
