@@ -18,7 +18,7 @@ hence interesting if more than 1 match)
 7. If region not annotated, potential virus inserted in chromosomal
 dna.
 
-## 1: Retrieval of the information on the bacterias of interest
+## 1 Retrieval of the information on the bacterias of interest
 
 The python script *get-bacteria-links-from-cripsrdb.py* connects to
 [crisprdb](http://crispr.u-psud.fr/crispr/) and retrieves all the
@@ -31,7 +31,7 @@ reference genome studied, the genbank id, the number of CRISPR cluster
 found. The output of that script is a text file:
 *bacteria_info_crisprdb.txt* which is fed to the next script in Part 2.
 
-## 2: Downloading of the genomes of bacterias
+## 2 Downloading of the genomes of bacterias
 
 The python script *download-genomes-from-ncbi.py* makes use of the
 REST API of NCBI (Entrez) to download each genomes into a local
@@ -50,19 +50,21 @@ corresponding sha1sum is:
 acff7aa9d6fb29977f1471640a901c42a8d98237  genomes_full.tar.bz2
 ```
 
-## 3: Generation of reports on CRISPR
+## 3 Generation of reports on CRISPR
 
 The python script *generate-crispr-reports.py* makes use of the crispr
 tool to produce one file/report per bacteria in the *genomes*
 folder. The reports are output to the *crispr* folder.
 
   
-## 4: Analysis of the reports
-
-**IN PROGRESS**
+## 4 Analysis of the reports
 
 The python script *count-spacer-occurence-in-genome.py* parses the
 crispr reports to search for repeats of spacers in non-crispr regions
-of the genomes.
+of the genomes. At the moment, it ignores spacers that are too short 
+15 nucleotides). There is a lot of result, probably need to add a filtering
+step.
 
-## 5:
+## 5 and more
+
+**In Progress**
