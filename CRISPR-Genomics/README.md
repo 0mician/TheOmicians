@@ -59,7 +59,7 @@ folder. The reports are output to the *crispr* folder.
   
 ## 4 Analysis of the reports
 
-The python script *count-spacer-occurence-in-genome.py* parses the
+The python script *count-spacers-occurences-in-genomes.py* parses the
 crispr reports to search for repeats of spacers in non-crispr regions
 of the genomes. At the moment, it ignores spacers that are too short 
 15 nucleotides). There is a lot of result, probably need to add a filtering
