@@ -9,11 +9,9 @@ crisprdb](http://crispr.u-psud.fr/crispr/) parsing it through script
 (no API unfortunately)
 2. Download (automatically?) the genomes of these bacterias from NCBI.
 3. Run pilercr on each genome and produce report on spacers.
-4. Go through the report and extract spacer sequences, save spacer
-sequences in 1 file per bacteria.
-5. Go through files produced in step 4 and search for matches of
-spacer sequence in genome of bacteria (1 match at least from crispr,
-hence interesting if more than 1 match)
+4. Go through the report and extract spacer sequences, for each
+spacer, check in the corresponding genome if there is a sequence
+(aside from the spacer sequence in the crispr region) that matches it. 
 6. Go through matches and look at annotation for these regions 
 7. If region not annotated, potential virus inserted in chromosomal
 dna.
@@ -64,6 +62,8 @@ crispr reports to search for repeats of spacers in non-crispr regions
 of the genomes. At the moment, it ignores spacers that are too short 
 15 nucleotides). There is a lot of result, probably need to add a filtering
 step.
+
+The output of that analysis is the file *crispr-repeats.txt*
 
 ## 5 and more
 
