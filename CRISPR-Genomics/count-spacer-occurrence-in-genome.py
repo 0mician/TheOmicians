@@ -3,21 +3,15 @@ import re
 from difflib import get_close_matches, SequenceMatcher
 
 ##### Specify file path #####
-# pilerIn = file path of input for pilerCR
-# output = file path of output from pilerCR
-# pilercrDir = file path of pilercr folder
+# pilerDir = file path of pilercr reports
+# output = file path of output for pilercr reports
 # genomePath = file path of genome, function will look for spacers in this genome, FASTA format
- 
+# crisprHits = if multiple crispr spacers are found in a genome (outside of CRISPR region)
+
 pilerDir = "crispr/"
-pilerOut = "crispr/%s"
 genomePath = "genomes/" 
 crisprHits = "crispr-hits/"
 spacers_regex = re.compile('(?<=\.\.\.    )\w+')
-
-##### Find CRISPR using pilercr #####
-for fn in os.listdir(genomePath):
-        cmd = "pilercr -in %s -out %s"%(genomePath + fn,pilerOut % fn)
-        os.system(cmd) 
 
 ##### Get spacers from output.txt #####
 for fn in os.listdir(pilerDir):

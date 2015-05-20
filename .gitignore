@@ -26,6 +26,7 @@ data/.~lock.WHO.csv#
 
 # various notes
 notes/
+genomes_full/
 genomes/
 crispr/
 crispr-hits/
