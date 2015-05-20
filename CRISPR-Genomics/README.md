@@ -12,8 +12,8 @@ crisprdb](http://crispr.u-psud.fr/crispr/) parsing it through script
 4. Go through the report and extract spacer sequences, for each
 spacer, check in the corresponding genome if there is a sequence
 (aside from the spacer sequence in the crispr region) that matches it. 
-6. Go through matches and look at annotation for these regions 
-7. If region not annotated, potential virus inserted in chromosomal
+5. Go through matches and look at annotation for these regions 
+6. If region not annotated, potential virus inserted in chromosomal
 dna.
 
 ## 1 Retrieval of the information on the bacterias of interest
