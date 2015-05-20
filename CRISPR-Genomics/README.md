@@ -41,11 +41,12 @@ genomic information. Make sure that you have enough room to save them.
 ### Note
 
 You can avoid this step (and spare NCBI's servers) by downloading the
-archive (compressed to 2.5gb) from this address (link coming). The
+archive (compressed to 2.5gb) from [this
+address](https://altersid.net/owncloud/index.php/s/d4GhPsbQ3a2wNfO). The
 corresponding sha1sum is:
 
 ```
-> sha1sum genomes_full.tar.bz2 
+> sha1sum genomes_full.tar.bz2
 acff7aa9d6fb29977f1471640a901c42a8d98237  genomes_full.tar.bz2
 ```
 

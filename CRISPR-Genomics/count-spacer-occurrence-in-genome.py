@@ -12,22 +12,33 @@ pilerDir = "crispr/"
 genomePath = "genomes/" 
 crisprHits = "crispr-hits/"
 spacers_regex = re.compile('(?<=\.\.\.    )\w+')
+report_out = open(crisprHits + "spacer_count.txt", "w")
 
 ##### Get spacers from output.txt #####
 for fn in os.listdir(pilerDir):
-        report = open(pilerDir + fn, 'r')
-        report = report.read()
-        spacers = re.findall(spacers_regex, report)
-        ##### Read genome #####
-        g = open(genomePath + fn, 'r')
-        print fn
-        genome = g.readlines()[1:]
-        genome = "".join(genome)
-        genome = genome.replace('\n', "")
-        ##### Count spacer occurrence in genome and save output #####
-        for spacer in spacers:
-                n = genome.count(spacer)
-                print "Spacer: %s\tOccurrence: %i" % (spacer, n) 
+    report = open(pilerDir + fn, 'r')
+    report = report.read()
+    spacers = re.findall(spacers_regex, report)
+    ##### Read genome #####
+    g = open(genomePath + fn, 'r')
+    genome = g.readlines()[1:]
+    genome = "".join(genome)
+    genome = genome.replace('\n', "")
+    ##### Count spacer occurrence in genome and save output #####
+    flag_file = False
+    spacer_dic = {}
+    for spacer in spacers:
+        n = genome.count(spacer)
+        if(n > 1 and len(spacer) > 15):
+            if(flag_file == False):
+                report_out.write(fn + "\n")
+                flag_file = True
+            spacer_dic[spacer] = n
+    for key in spacer_dic:    
+        report_out.write("Spacer: %s\tOccurrence: %i \n" % (key, spacer_dic[key]))
+
+report_out.close()
+ 
 
 ##### Count loose match of spacer in genome #####
 # print "\n\nSequences similar to spacers\n"
