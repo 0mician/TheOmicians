@@ -4,19 +4,17 @@
   tasks:
     - name: update apt cache
       apt: update_cache=yes
-    - name: install pip
-      apt: name=python-pip state=present
-    - name: install python-dev
-      apt: name=python-dev
     - name: Install python packages
       apt: pkg={{item}} state=installed
       with_items:
+      - python-dev
+      - python-pip
       - python-beautifulsoup
       - python-requests
       - ipython
     - name: Create crispr directory
-      file: path=/vagrant/CRISPR-Genomics/crispr state=directory
-    - name: Create genomes directory
-      file: path=/vagrant/CRISPR-Genomics/genomes state=directory
-    - name: Create crispr-hits directory
-      file: path=/vagrant/CRISPR-Genomics/crispr-hits state=directory
+      file: path={{item}} state=directory
+      with_items:
+      - /vagrant/CRISPR-Genomics/crispr
+      - /vagrant/CRISPR-Genomics/genomes
+      - /vagrant/CRISPR-Genomics/crispr-hits
