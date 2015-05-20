@@ -10,21 +10,32 @@ from difflib import get_close_matches, SequenceMatcher
 
 pilerDir = "crispr/"
 genomePath = "genomes/" 
-crisprHits = "crispr-hits/"
 spacers_regex = re.compile('(?<=\.\.\.    )\w+')
-report_out = open(crisprHits + "spacer_count.txt", "w")
+report_out = open("spacer_count.txt", "w")
 
-##### Get spacers from output.txt #####
+### How many files to process?
+genomePath = "genomes_full/"
+nb_genomes = len([name for name in os.listdir(genomePath)])
+counter = 1
+
+### Get spacers from output.txt 
 for fn in os.listdir(pilerDir):
+    ### Tracking progress
+    print "Processing genome %i of %i" % (counter, nb_genomes)
+    counter += 1
+
+    ### Obtain pilercr report and get spacers
     report = open(pilerDir + fn, 'r')
     report = report.read()
     spacers = re.findall(spacers_regex, report)
-    ##### Read genome #####
+
+    ### Read genome associated with report
     g = open(genomePath + fn, 'r')
     genome = g.readlines()[1:]
     genome = "".join(genome)
     genome = genome.replace('\n', "")
-    ##### Count spacer occurrence in genome and save output #####
+
+    ### Count spacer occurrence in genome and save output
     flag_file = False
     spacer_dic = {}
     for spacer in spacers:
