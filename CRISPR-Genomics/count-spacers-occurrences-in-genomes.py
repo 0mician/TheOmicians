@@ -1,10 +1,10 @@
 import os
 import re
+from collections import Counter
 from difflib import get_close_matches, SequenceMatcher
 
 ##### Specify file path #####
 # pilerDir = file path of pilercr reports
-# output = file path of output for pilercr reports
 # genomePath = file path of genome, function will look for spacers in this genome, FASTA format
 # crisprHits = if multiple crispr spacers are found in a genome (outside of CRISPR region)
 
@@ -14,7 +14,7 @@ spacers_regex = re.compile('(?<=\.\.\.    )\w+')
 report_out = open("spacer_count.txt", "w")
 
 ### How many files to process?
-genomePath = "genomes_full/"
+genomePath = "genomes/"
 nb_genomes = len([name for name in os.listdir(genomePath)])
 counter = 1
 
@@ -29,13 +29,17 @@ for fn in os.listdir(pilerDir):
     report = report.read()
     spacers = re.findall(spacers_regex, report)
 
+    ### create dic with values as number of repetitions of a given spacer
+    count = Counter(spacers)
+    print type(count)
+
     ### Read genome associated with report
     g = open(genomePath + fn, 'r')
     genome = g.readlines()[1:]
     genome = "".join(genome)
     genome = genome.replace('\n', "")
 
-    ### Count spacer occurrence in genome and save output
+    ### Count spacer occurrence in genome
     flag_file = False
     spacer_dic = {}
     for spacer in spacers:
@@ -45,9 +49,12 @@ for fn in os.listdir(pilerDir):
                 report_out.write(fn + "\n")
                 flag_file = True
             spacer_dic[spacer] = n
-    for key in spacer_dic:    
-        report_out.write("Spacer: %s\tOccurrence: %i \n" % (key, spacer_dic[key]))
 
+    ### Filter out spacers that are repeated in the CRISPR regions
+    for key in spacer_dic:   
+        if (count[key] == spacer_dic[key]):
+            report_out.write("Spacer: %s\tOccurrence: %i \n" % (key, spacer_dic[key]))
+            
 report_out.close()
  
 
