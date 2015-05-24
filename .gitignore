@@ -29,3 +29,6 @@ notes/
 genomes_full/
 genomes/
 crispr/
+
+#metagenomics
+spades_test/
