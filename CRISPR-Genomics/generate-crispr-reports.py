@@ -5,7 +5,7 @@ import os
 # genomePath = file path of genome, function will look for spacers in this genome, FASTA format
 
 pilerOut = "crispr/%s"
-genomePath = "genomes_full/"
+genomePath = "genomes/"
 number_of_files = len([name for name in os.listdir(genomePath)])
 i = 1
 
