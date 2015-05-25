@@ -29,6 +29,6 @@ notes/
 genomes_full/
 genomes/
 crispr/
-
+SAMTests/
 #metagenomics
-spades_test/
+SPAdes-3.5.0-Linux/bin/spades_test/
