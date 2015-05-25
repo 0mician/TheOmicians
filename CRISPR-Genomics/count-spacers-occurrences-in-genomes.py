@@ -30,8 +30,9 @@ for fn in os.listdir(pilerDir):
     spacers = re.findall(spacers_regex, report)
 
     ### create dic with values as number of repetitions of a given spacer
+    #spacers = list(set(spacers))
     count = Counter(spacers)
-    print type(count)
+    #print type(count)
 
     ### Read genome associated with report
     g = open(genomePath + fn, 'r')
@@ -52,7 +53,7 @@ for fn in os.listdir(pilerDir):
 
     ### Filter out spacers that are repeated in the CRISPR regions
     for key in spacer_dic:   
-        if (count[key] == spacer_dic[key]):
+        if (count[key] < spacer_dic[key]):
             report_out.write("Spacer: %s\tOccurrence: %i \n" % (key, spacer_dic[key]))
             
 report_out.close()
