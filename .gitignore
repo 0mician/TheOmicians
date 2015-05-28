@@ -27,8 +27,10 @@ data/.~lock.WHO.csv#
 # various notes
 notes/
 genomes_full/
+crispr_bak/
 genomes/
 crispr/
 SAMTests/
 #metagenomics
 SPAdes-3.5.0-Linux/bin/spades_test/
+*.tmp
