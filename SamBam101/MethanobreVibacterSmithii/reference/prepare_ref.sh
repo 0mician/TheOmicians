@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DL_ADDRESS="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=53711291&rettype=fasta&retmode=txt"
+DL_ADDRESS="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=148642060&rettype=fasta&retmode=txt"
 FUNCTION_FILE=../../functions.sh
 
 if [[ -f $FUNCTION_FILE ]]; then

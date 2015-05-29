@@ -1,9 +1,9 @@
 #!/bin/bash
 
 FUNCTION_FILE=../../functions.sh
-FILE=$PWD/ERR738801
+FILE=$PWD/SRR036257
 REF=../reference/sequence.fasta
-DL_ADDRESS="ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/ERR/ERR738/ERR738801/ERR738801.sra"
+DL_ADDRESS="ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR036/SRR036257/SRR036257.sra"
 
 if [[ -f $FUNCTION_FILE ]]; then
     . $FUNCTION_FILE
@@ -27,6 +27,7 @@ function processData(){
     bam_creation $FILE.bam $FILE.sam $FILE.sorted $FILE.sorted.bam 
     bam_stats $FILE.sorted.bam
 }
+
 
 case "$1" in
 

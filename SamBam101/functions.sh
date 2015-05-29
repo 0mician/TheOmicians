@@ -23,6 +23,13 @@ function sam_creation(){
     echo "Done"
 }
 
+# params: reference_genome aln_fastq1 aln_fastq2 trimmed_fastq1 trimmer_fastq2  output_sam
+function sam_creation_pe(){
+    echo "Creation of sam file"
+    $PATH_TOOLS/bwa sampe $1 $2 $3 $4 $5 -f $6
+    echo "Done"
+}
+
 # params: input_sam output_bam output_sorted output_sorted_bam
 function bam_creation(){
     echo "Samtools to bam, sort, index"
@@ -43,6 +50,13 @@ function bam_stats() {
 function convert_sra_fastq() {
     echo "Converting to fastq"
     $PATH_TOOLS/fastq-dump.2.5.0 $1
+    echo "Done"
+}
+
+# params: sra_input
+function convert_sra_fastq_pe() {
+    echo "Converting to fastq"
+    $PATH_TOOLS/fastq-dump.2.5.0 -I --split-3 $1
     echo "Done"
 }
 
