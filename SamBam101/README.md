@@ -14,7 +14,7 @@ We conducted the analysis on 4 different bacterias, which were advised to us by 
 - [Faecalibacterium Prausnitzii](https://en.wikipedia.org/wiki/Faecalibacterium_prausnitzii)
 - [Akkermansia Muciniphila](https://en.wikipedia.org/wiki/Akkermansia_muciniphila)
 
-For all the above, conducted the full analysis described below. To keep this section short and readable we will go through an example. 
+For all these bacterias, the full analysis described below was performed. We'll limit the examples to one, as the others are very similar and can be reproduced easily.
 
 # Methanobrevibacter Smithii
 
@@ -71,3 +71,22 @@ $ ./reads2sam.sh
 Usage : ./reads2sam.sh [clean | all | dl2fastq | sambam | stats]
 ```
 
+The option "all" will go through the following steps:
+
+1. Downloading the SRA file from NCBI (these can be quite large)
+2. Dump the SRA into a fastq file (or 2 fastq file if the sequencing was "paired end")
+3. Trimming the sequence based on the quality of the reads (see section "Analysis of the quality of the reads")
+4. Finding the Suffix Array (SA) coordinates of the reads
+5. Conversion of the SA to chromosome position and creation of SAM file
+6. Creation of the BAM file and associated files
+7. Retrieval of statistics on the quality of the alignment.
+
+### Analysis of the quality of the reads
+
+Before running the script, one should decide on the cutoff values of the reads based on the quality metrics. For this, FastQC can be used. We used the following information to set our cutoff values from 10 to 100:
+
+![QC before trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/QCBefore.png)
+
+Which resulted in the following QC report:
+
+![QC after trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/QCAfter.png)
