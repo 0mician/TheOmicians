@@ -1,20 +1,54 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Trimminh"
-../../fastx_trimmer -i SRR073383.fastq -o SRR073383.trim.fastq -f 10 -l 100 -Q33
-echo "Done\n\n"
+FUNCTION_FILE=../../functions.sh
+FILE=$PWD/SRR073383
+REF=../reference/sequence.fasta
+DL_ADDRESS="ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByRun/sra/SRR/SRR073/SRR073383/SRR073383.sra"
 
-echo "Creation of bwa alignment"
-../../bwa aln ../reference/sequence.fasta SRR073383.fastq -f SRR073383.ref.fastq.aln
-echo "Done\n\n"
+if [[ -f $FUNCTION_FILE ]]; then
+    . $FUNCTION_FILE
+fi
 
-echo "Creation of sam file"
-../../bwa samse ../reference/sequence.fasta SRR073383.ref.fastq.aln SRR073383.fastq -f SRR073383.sam
-echo "Done\n\n"
+if [ $# -lt 1 ]
+then
+    echo "Usage : $0 [clean | all | dl2fastq | sambam | stats]"
+    exit
+fi
 
-echo "Samtools to bam, sort, index && flagstat"
-../../samtools view -Sb -o SRR073383.bam SRR073383.sam
-../../samtools sort SRR073383.bam SRR073383.sorted
-../../samtools index SRR073383.sorted.bam
-../../samtools flagstat SRR073383.sorted.bam
-echo "Done\n\n"
+case "$1" in
+
+    "clean") 
+        echo "cleaning up the folder"
+        find ! -name 'reads2sam.sh' -and ! -name '.gitignore' -type f -exec rm -f {} +
+        ;;
+    "all")
+        echo "Starting from scratch"
+        dl_ncbi $DL_ADDRESS $FILE.sra
+        convert_sra_fastq $FILE.sra
+        trimming $FILE.fastq $FILE.trim.fastq 10 100
+        bwa_align $REF $FILE.trim.fastq $FILE.ref.fastq.aln
+        sam_creation $REF $FILE.ref.fastq.aln $FILE.trim.fastq $FILE.sam
+        bam_creation $FILE.bam $FILE.sam $FILE.sorted $FILE.sorted.bam 
+        bam_stats $FILE.sorted.bam
+        ;;
+    "dl2fastq")
+        echo "Downloading from NCBI and converting to fastq"
+        dl_ncbi $DL_ADDRESS $FILE.sra
+        convert_sra_fastq $FILE.sra
+        ;;
+    "sambam")
+        echo "generating sam bam and extra files from fastq"
+        trimming $FILE.fastq $FILE.trim.fastq 10 100
+        bwa_align $REF $FILE.trim.fastq $FILE.ref.fastq.aln
+        sam_creation $REF $FILE.ref.fastq.aln $FILE.trim.fastq $FILE.sam
+        bam_creation $FILE.bam $FILE.sam $FILE.sorted $FILE.sorted.bam 
+        bam_stats $FILE.sorted.bam
+        ;;
+    "stats")
+        bam_stats $FILE.sorted.bam
+        ;;
+    *)
+        echo "Usage : $0 [clean | all | dl2fastq | sambam | stats]"
+        exit
+        ;;
+esac

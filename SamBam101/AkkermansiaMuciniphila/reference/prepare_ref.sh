@@ -1,17 +1,43 @@
-#!/bin/sh
+#!/bin/bash
 
-echo "Retrieving sequence from NCBI"
-curl -s "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=187734516&rettype=fasta&retmode=txt" > sequence.fasta
-echo "Done\n\n"
+DL_ADDRESS="http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nucleotide&id=187734516&rettype=fasta&retmode=txt"
+FUNCTION_FILE=../../functions.sh
 
-echo "Generating BWA index"
-../../bwa index -a bwtsw sequence.fasta
-echo "Done\n\n"
+if [[ -f $FUNCTION_FILE ]]; then
+    . $FUNCTION_FILE
+fi
 
-echo "Generating fasta file index"
-../../samtools faidx sequence.fasta
-echo "Done\n\n"
+if [ $# -lt 1 ]
+then
+    echo "Usage : $0 [clean | all | dlref | prepref]"
+    exit
+fi
 
-echo "Generating sequence Dictionary"
-java -jar ../../picard.jar CreateSequenceDictionary REFERENCE=sequence.fasta OUTPUT=sequence.dict
-echo "Done\n\n"
+case "$1" in
+
+    "clean") 
+        echo "cleaning up the folder"
+        find ! -name 'prepare_ref.sh' -and ! -name '.gitignore' -type f -exec rm -f {} +
+        ;;
+    "all")
+        echo "Starting from scratch"
+        dl_ncbi $DL_ADDRESS $PWD/sequence.fasta
+        generate_bwa_index sequence.fasta
+        generate_fasta_index sequence.fasta
+        generate_seq_dic sequence.fasta sequence.dict
+        ;;
+    "dlref")
+        dl_ncbi $DL_ADDRESS $PWD/sequence.fasta
+        ;;
+    "prepref")
+        echo "generating sam bam and extra files from fastq"
+        generate_bwa_index sequence.fasta
+        generate_fasta_index sequence.fasta
+        generate_seq_dic sequence.fasta sequence.dict
+        ;;
+    *)
+        echo "Usage : $0 [clean | all | dlref | prepref]"
+        exit
+        ;;
+esac
+

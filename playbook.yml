@@ -12,6 +12,7 @@
       - python-beautifulsoup
       - python-requests
       - ipython
+      - openjdk-7-jre
     - name: Create crispr directory
       file: path={{item}} state=directory
       with_items:
