@@ -85,8 +85,8 @@ The option "all" will go through the following steps:
 
 Before running the script, one should decide on the cutoff values of the reads based on the quality metrics. For this, FastQC can be used. We used the following information to set our cutoff values from 10 to 100:
 
-![QC before trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/QCBefore.png)
+![QC before trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/FastQCBefore.png)
 
-Which resulted in the following QC report:
+Which resulted in the following improvement:
 
-![QC after trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/QCAfter.png)
+![QC after trimming reads](https://raw.githubusercontent.com/Milt0n/TheOmicians/master/SamBam101/img/FastQCAfter.png)
