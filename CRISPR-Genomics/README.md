@@ -65,6 +65,12 @@ step.
 
 The output of that analysis is the file *crispr-repeats.txt*
 
-## 5 and more
+### Additional filtering step
 
-**In Progress**
+As we discovered, there are many false positive that came out of the naive filtering step implemented in *count-spacers-occurences-in-genomes.py*. To narrow down the results further, another script was added to our pipeline *filter-spacers.py* which reduces the hits by about 75%. The script goes through all the spacers in the *crispr-repeats.txt* report, and removes the spacers that can be found in other CRISPR arrays, or in the same array as it was found in initially, but as a substring of another spacer. The output of that script is *filter_spacer_count.txt*
+
+## 5 Annotations
+
+The python script *retrieve-annotations.py* makes use again of the REST API of NCBI to download the annotations of the genomes where spacers of interest can be found in (see *filter_spacer_count.txt* for the list). The annotations are saved in the *annotations/* folder.
+
+
