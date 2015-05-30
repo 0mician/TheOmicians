@@ -5,11 +5,11 @@ import os
 import copy
 
 pilerReportsPath = "crispr/"
-spacerCountReport = "spacer_count.txt"
+spacerCountReport = "reports/spacer_count.txt"
 genomesPath = "genomes_full/"
 spacer_regex = re.compile('(?<=Spacer: )\w+')
 occurence_regex = re.compile('\d+')
-outputReport = "filter_spacer_count.txt"
+outputReport = "reports/filter_spacer_count.txt"
 
 # This returns a dictionary, where each key is an integer representing the ith CRISPR region
 # and each value is a list with the [start, end] of the region

@@ -11,7 +11,7 @@ from difflib import get_close_matches, SequenceMatcher
 pilerDir = "crispr/"
 genomePath = "genomes_full/" 
 spacers_regex = re.compile('(?<=\.\.\.    )\w+')
-report_out = open("spacer_count.txt", "w")
+report_out = open("reports/spacer_count.txt", "w")
 
 ### How many files to process?
 nb_genomes = len([name for name in os.listdir(genomePath)])
