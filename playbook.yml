@@ -20,3 +20,4 @@
       - /vagrant/CRISPR-Genomics/genomes
       - /vagrant/CRISPR-Genomics/crispr-hits
       - /vagrant/CRISPR-Genomics/reports
+      - /vagrant/CRISPR-Genomics/annotations
