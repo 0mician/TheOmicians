@@ -3,7 +3,7 @@ import requests
 
 inputReport = "reports/filter_spacer_count.txt"
 outputFolder = "annotations/"
-ncbi_url = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=%s&rettype=ft&retmode=text"
+ncbi_url = "http://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=%s&rettype=gbwithparts&retmode=text"
 
 # Progress tracking
 f = open(inputReport)
