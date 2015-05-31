@@ -54,8 +54,9 @@ for key in id_region:
                 
     for a in spacer_feature:
         outputAnnotation.write(str(a) + "\n")
-        outputAnnotation.write(spacer_feature[a] + "\n\n")
-        
+        line = spacer_feature[a].split("/")
+        line = "\n\t".join(line)
+        outputAnnotation.write(line + "\n\n")
     annotation_file.close()
 
 f.close()
