@@ -38,18 +38,23 @@ for key in id_region:
     region_features = {}
     for line in annotation:
         if bool(re.findall('\d+\.\.\d+', line)):
-            pos = re.findall('\d+(?=\.\.\d+)', line)[0]
-            pos = int(pos)
-            region_features[pos] = line
+            start = re.findall('\d+(?=\.\.\d+)', line)[0]
+            stop = re.findall('(?<=\.\.)\d+', line)[0]
+            start = int(start)
+            stop = int(stop)
+            region_features[start] = [stop, line]
         else:
             continue
+
     spacer_feature = {}
-    
     # for key in id_region:
     for value in id_region[key]:
         for region in reversed(sorted(region_features)):
-            if value > region:
-                spacer_feature[value] = region_features[region]
+            if value > region :
+                if value < region_features[region][0]:
+                    spacer_feature[value] = region_features[region][1]
+                else:
+                    spacer_feature[value] = "Not annotated\n"
                 break
                 
     for a in spacer_feature:
