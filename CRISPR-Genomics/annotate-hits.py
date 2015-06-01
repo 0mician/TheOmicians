@@ -59,16 +59,16 @@ for key in id_region:
                 
     for a in spacer_feature:
         outputAnnotation.write(str(a) + "\n")
-        outputFastap.write(">" + str(key))
+        outputFastap.write("\n>" + str(key))
         outputFastap.write("\t" + str(a) )
         line = spacer_feature[a].split("/")
         for entry in line:
             if ("Not annotated" in entry):
-                outputFastap.write("\n" + entry )
+                outputFastap.write("\n" + entry.rstrip("\n"))
             if ("product" in entry):
                 outputFastap.write("\t" + entry)
             if ("translation" in entry):
-                outputFastap.write("\n" + entry.strip("translation=\"").rstrip("\"") + "\n")
+                outputFastap.write("\n" + entry.strip("translation=\"").rstrip("\""))
         line = "\n\t".join(line)
 
         outputAnnotation.write(line + "\n\n")
