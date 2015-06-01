@@ -4,7 +4,7 @@ f = open("reports/filter_spacer_count.txt", "r")
 
 spacercount = f.readlines()
 outputAnnotation = open("reports/annotated_hits.txt", "w")
-
+outputFastap = open("reports/hits_proteins.fasta", "w")
 ##### id_region {genomeid : start position of each filtered spacer} #####
 id_region = {}
 
@@ -59,9 +59,22 @@ for key in id_region:
                 
     for a in spacer_feature:
         outputAnnotation.write(str(a) + "\n")
+        outputFastap.write(">" + str(key))
+        outputFastap.write("\t" + str(a) )
         line = spacer_feature[a].split("/")
+        for entry in line:
+            if ("Not annotated" in entry):
+                outputFastap.write("\n" + entry )
+            if ("product" in entry):
+                outputFastap.write("\t" + entry)
+            if ("translation" in entry):
+                outputFastap.write("\n" + entry.strip("translation=\"").rstrip("\"") + "\n")
         line = "\n\t".join(line)
+
         outputAnnotation.write(line + "\n\n")
     annotation_file.close()
 
 f.close()
+outputAnnotation.close()
+outputFastap.close()
+
