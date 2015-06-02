@@ -1,0 +1,48 @@
+pilercr v1.06
+By Robert C. Edgar
+
+genomes/BacteroidesFragilis.fasta: 1 putative CRISPR arrays found.
+
+
+
+DETAIL REPORT
+
+
+
+Array 1
+>gi|53711291|ref|NC_006347.1| Bacteroides fragilis YCH46 DNA, complete genome
+
+       Pos  Repeat     %id  Spacer  Left flank    Repeat                           Spacer
+==========  ======  ======  ======  ==========    =============================    ======
+   2924454      29   100.0      35  TTTTGCACAA    .............................    CAGCTCTTTTTCGTTTGCATCAAGTGCTCTCTTTT
+   2924518      29   100.0      35  GCTCTCTTTT    .............................    ACCAGCGATTCACTCGACAAATTTCTCAAACCTTT
+   2924582      29   100.0      35  TCAAACCTTT    .............................    AATGAATAAGGATAAGAGAATACATTCTTTTACTA
+   2924646      29   100.0      35  TCTTTTACTA    .............................    ATTGCGCTTTCTGTGCGATATTGGCGAGGGTATAT
+   2924710      29   100.0      35  GAGGGTATAT    .............................    AGAGGCGTGCTTCTTCATTAAGCCTGTCTATATGA
+   2924774      29   100.0      35  GTCTATATGA    .............................    ACAACAGGAACTTTGCCTGTACTGCTTGGAACGAA
+   2924838      29   100.0      36  TTGGAACGAA    .............................    ATCACACAGTATCACAAAGAACATAGTGATCAACCA
+   2924903      29   100.0      35  TGATCAACCA    .............................    ACTAAAAATGTCATGGGTGGATGCTCGTTTAAATA
+   2924967      29   100.0          CGTTTAAATA    .............................    TCTACCCATC
+==========  ======  ======  ======  ==========    =============================
+         9      29              35                ATTTCAATTCCATAAGGTACAATTAATAC
+
+
+SUMMARY BY SIMILARITY
+
+
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer  +  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  =  =========
+    1  gi|53711291|ref|     2924454         542         9      29      35  +  ATTTCAATTCCATAAGGTACAATTAATAC
+
+
+
+SUMMARY BY POSITION
+
+
+
+>gi|53711291|ref|NC_006347.1| Bacteroides fragilis YCH46 DNA, complete genome
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer    Distance  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  ==========  =========
+    1  gi|53711291|ref|     2924454         542         9      29      35              ATTTCAATTCCATAAGGTACAATTAATAC

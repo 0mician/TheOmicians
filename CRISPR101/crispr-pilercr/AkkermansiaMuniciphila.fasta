@@ -1,0 +1,63 @@
+pilercr v1.06
+By Robert C. Edgar
+
+genomes/AkkermansiaMuniciphila.fasta: 2 putative CRISPR arrays found.
+
+
+
+DETAIL REPORT
+
+
+
+Array 1
+>gi|187734516|ref|NC_010655.1| Akkermansia muciniphila ATCC BAA-835, complete genome
+
+       Pos  Repeat     %id  Spacer  Left flank    Repeat                                  Spacer
+==========  ======  ======  ======  ==========    ====================================    ======
+   2438404      36   100.0      30  GAACACCGTT    ....................................    CTTCGCATAACACACATAATGCAAAGTCGG
+   2438470      36   100.0      29  GCAAAGTCGG    ....................................    TCATCACTCTTTCCGGCGTTCCCCTCATC
+   2438535      36   100.0      30  TCCCCTCATC    ....................................    CATTTGACAGGGGAGACTTCCATAAGCTCA
+   2438601      36   100.0      30  CATAAGCTCA    ....................................    AATATCTAAAATCCTCAAACCTCTACACCG
+   2438667      36   100.0      30  CTCTACACCG    ....................................    GGAGGAACCTTCTACCCCTACGGACCTGCT
+   2438733      36   100.0      29  CGGACCTGCT    ....................................    TTGTGGCGCAGCATGCGCCGCGGCCATTG
+   2438798      36   100.0      30  GCGGCCATTG    ....................................    GTAGCGCAGGTAGAGCTGACGGATGATCAT
+   2438864      36   100.0      30  GGATGATCAT    ....................................    GACTTTGATGCCGAAAATAATGCTTATCAT
+   2438930      36   100.0          TGCTTATCAT    ....................................    AGATACTGTG
+==========  ======  ======  ======  ==========    ====================================
+         9      36              29                GTTTTGCCTTGAATCCAAAATAAGGCACAGTACAAC
+
+
+Array 2
+>gi|187734516|ref|NC_010655.1| Akkermansia muciniphila ATCC BAA-835, complete genome
+
+       Pos  Repeat     %id  Spacer  Left flank    Repeat                               Spacer
+==========  ======  ======  ======  ==========    =================================    ======
+   2507589      33    93.9      35  GCTTTTTCTT    -....................A...........    GGATGTTGTGACGGCCAGACAAGCAACGAGCAATA
+   2507657      33   100.0      37  ACGAGCAATA    .................................    TTTCTATTGTTTTTATCCTCCGGAATCCGGGGTACAG
+   2507727      33   100.0          CGGGGTACAG    .................................    ATAATATGACCATTGTAGCTGATAATATATGGGG
+==========  ======  ======  ======  ==========    =================================
+         3      33              36                GTTTCAATCCACGCACTCCTTGCGGAGTGCGAC
+
+
+SUMMARY BY SIMILARITY
+
+
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer  +  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  =  =========
+    1  gi|187734516|ref     2438404         562         9      36      29  +  GTTTTGCCTTGAATCCAAAATAAGGCACAGTACAAC
+
+    2  gi|187734516|ref     2507589         170         3      33      36  +  GTTTCAATCCACGCACTCCTTGCGGAGTGCGAC
+
+
+
+SUMMARY BY POSITION
+
+
+
+>gi|187734516|ref|NC_010655.1| Akkermansia muciniphila ATCC BAA-835, complete genome
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer    Distance  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  ==========  =========
+    1  gi|187734516|ref     2438404         562         9      36      29              GTTTTGCCTTGAATCCAAAATAAGGCACAGTACAAC
+    2  gi|187734516|ref     2507589         170         3      33      36       68594  GTTTCAATCCACGCACTCCTTGCGGAGTGCGAC

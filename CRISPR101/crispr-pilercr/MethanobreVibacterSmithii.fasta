@@ -1,0 +1,83 @@
+pilercr v1.06
+By Robert C. Edgar
+
+genomes/MethanobreVibacterSmithii.fasta: 1 putative CRISPR arrays found.
+
+
+
+DETAIL REPORT
+
+
+
+Array 1
+>gi|148642060|ref|NC_009515.1| Methanobrevibacter smithii ATCC 35061 chromosome, complete genome
+
+       Pos  Repeat     %id  Spacer  Left flank    Repeat                             Spacer
+==========  ======  ======  ======  ==========    ===============================    ======
+    152502      31    96.8      36  AGATATTAAG    ....A..........................    AGTTGACCTAAGTTTATATAATTGTGCAAATCCAGC
+    152569      31   100.0      36  CAAATCCAGC    ...............................    AGATGATGTTTTATTGGAGAATGGATATGCAGTACA
+    152636      31   100.0      37  ATGCAGTACA    ...............................    CAGGTTATCATTTTCCATGATTACTTTATCATGTGTA
+    152704      31   100.0      36  ATCATGTGTA    ...............................    ATTATATGATGCTGTAGACTTAAGATGACTTTCTTG
+    152771      31   100.0      35  GACTTTCTTG    ...............................    ACTCACAAAAGAAACAGTGATCCTTATATTGCTCA
+    152837      31   100.0      34  ATATTGCTCA    ...............................    TTGAATTAGAAATCACAGTTAAAGAAATACCTAC
+    152902      31   100.0      33  AAATACCTAC    ...............................    TCCTATTTTGGACAATTTTGTTTTAATACCATC
+    152966      31   100.0      35  TAATACCATC    ...............................    ATCACCATCATACCATTTTCATTTATATGAATATT
+    153032      31   100.0      34  TATGAATATT    ...............................    CTACAAAAAACCATTCAAGCAATAAACCTGACTA
+    153097      31   100.0      37  AACCTGACTA    ...............................    TATCTAAATCATTCCTTTTATAAATCACTTCACTGAT
+    153165      31   100.0      36  CTTCACTGAT    ...............................    CTGTGTCGTTTAATAATAAATCATTTACGTAACTAA
+    153232      31   100.0      35  ACGTAACTAA    ...............................    CTAATACATCTGACATCATAAAAACACCTTTCATA
+    153298      31   100.0      36  ACCTTTCATA    ...............................    GACAGTTAAAACATTTGCCATTACAAATTATATATT
+    153365      31   100.0      32  ATTATATATT    ...............................    CCATACATTATCATACCAGTAAACCAATTTGG
+    153428      31   100.0      36  ACCAATTTGG    ...............................    TTCCACACTATCAAATTTGTTGATTTTTTCCATTCT
+    153495      31   100.0      37  TTTCCATTCT    ...............................    AAAAGTATACAAATAATCTGAAAACCATGGGTTCTAT
+    153563      31   100.0      35  TGGGTTCTAT    ...............................    ATCTTCCTTTTTGATAACAAGATTTGTTTCCTCGT
+    153629      31   100.0      36  GTTTCCTCGT    ...............................    ACTGGTTTAAATGGTGCTGGAATATCTAATAATCCA
+    153696      31   100.0      36  TAATAATCCA    ...............................    AATATATTTATATAGTAGACGGTATAAAGTAATATA
+    153763      31   100.0      36  AAGTAATATA    ...............................    TTTGATGTAGTTCTTCTTCAGTTATGTTGAATGTGT
+    153830      31   100.0      36  TTGAATGTGT    ...............................    ACATTCACCAACCTCAATTTCCATTTCAATAGTTTT
+    153897      31   100.0      36  CAATAGTTTT    ...............................    TGCTCCTGCAATCAAAATTAAAATCTTGTAAACTTC
+    153964      31   100.0      37  TGTAAACTTC    ...............................    CATCACGTCTTAACATTCTAATGTCATCTTCACTCCA
+    154032      31   100.0      36  CTTCACTCCA    ...............................    TTACTAATATGGCCAATGGTGTTAAAAGTTTACAAG
+    154099      31   100.0      36  AGTTTACAAG    ...............................    TTGTACATGCATTGTCCTGCATGTACTTTTAATGTT
+    154166      31   100.0      37  TTTTAATGTT    ...............................    TTTAGTTTATGATACTATGACCAGTGAATCCGACAGA
+    154234      31   100.0      37  ATCCGACAGA    ...............................    TAGTTGCAAAAGCTGTGGACACTGCAAGGTTAATTCT
+    154302      31   100.0      35  GGTTAATTCT    ...............................    ACCTCCTTTGTAACCTACAGGGTCACGACTGCCAG
+    154368      31   100.0      36  CGACTGCCAG    ...............................    TACTGAAAGGCATATCAGAATTAGTATCCAGTACAT
+    154435      31   100.0      36  TCCAGTACAT    ...............................    CAATACAGTTGCCTTCTACAATCCCGTTTTTAGTTG
+    154502      31   100.0      35  TTTTTAGTTG    ...............................    TAGGAAAAGCAATGGGAGCATTGTCTGATGTTAAT
+    154568      31   100.0      35  TGATGTTAAT    ...............................    TGTATATGTGAATAATGCTTGTCCATTATTATTCG
+    154634      31   100.0      38  TTATTATTCG    ...............................    ATTCTAATTGCATTGCGTTAGGATAATCGCTAACCTGT
+    154703      31   100.0      36  GCTAACCTGT    ...............................    TATTAATAAATCTTGTACTATTACTCATTGTCATAA
+    154770      31   100.0      33  ATTGTCATAA    ...............................    TCTAAAATCAGTGTATCCTGGTTCTTCATAGTA
+    154834      31   100.0      35  CTTCATAGTA    ...............................    CAAAGGTATCTGTGATGGATTTACTAATCATTTCC
+    154900      31   100.0      36  AATCATTTCC    ...............................    AGTTGCAGTAGTATAAGTAGAAGTTCCTTTATACGA
+    154967      31   100.0      34  CTTTATACGA    ...............................    TTGGTTACAAACAAGGTAAAGTTTTTCTACCTTT
+    155032      31   100.0      36  TTCTACCTTT    ...............................    TTTAGTAGTAGAAATAAGAAAAACTGAAAAAGTAAA
+    155099      31   100.0      36  AAAAAGTAAA    ...............................    ATTTAGATATTATGATGTTAATGCGGAAGTATGGTA
+    155166      31   100.0      32  AAGTATGGTA    ...............................    ATTCCTGCATATAGTACAATTACTGGAGTTAA
+    155229      31   100.0      34  CTGGAGTTAA    ...............................    ATCGCAGTGCTTGTAGCAATTATTGGTTTCGTAT
+    155294      31   100.0      34  GGTTTCGTAT    ...............................    AAGTAGTGTTGAATTTACATGGTACAAGTAATAC
+    155359      31   100.0          CAAGTAATAC    ...............................    AGGCCACATT
+==========  ======  ======  ======  ==========    ===============================
+        44      31              35                ATTTCAATCCTATTATAGTCTTATTTTTAAC
+
+
+SUMMARY BY SIMILARITY
+
+
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer  +  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  =  =========
+    1  gi|148642060|ref      152502        2888        44      31      35  +  ATTTCAATCCTATTATAGTCTTATTTTTAAC
+
+
+
+SUMMARY BY POSITION
+
+
+
+>gi|148642060|ref|NC_009515.1| Methanobrevibacter smithii ATCC 35061 chromosome, complete genome
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer    Distance  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  ==========  =========
+    1  gi|148642060|ref      152502        2888        44      31      35              ATTTCAATCCTATTATAGTCTTATTTTTAAC
