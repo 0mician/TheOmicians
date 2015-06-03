@@ -1,0 +1,3 @@
+#####
+MethanobreVibacterSmithii.fasta
+Spacer: AGGCCACATT	Occurrence: 2 

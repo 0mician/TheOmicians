@@ -6,7 +6,7 @@ r = requests.get(url)
 data = r.text
 soup = BeautifulSoup(data)
 links = soup.findAll('a', href=True)
-bacteria_links = open('bacteria_links_crispr.txt', 'w')
+bacteria_links = open('reports/bacteria_links_crispr.txt', 'w')
 temp = []
 
 for link in links:

@@ -1,8 +1,8 @@
 from BeautifulSoup import BeautifulSoup
 import requests
 
-bacteria_links = open("bacteria_links_crispr.txt", "r")
-info = open("bacteria_info_crisprdb.txt", "w")
+bacteria_links = open("reports/bacteria_links_crispr.txt", "r")
+info = open("reports/bacteria_info_crisprdb.txt", "w")
 
 for links in bacteria_links:
     refseq.write("#####\n")

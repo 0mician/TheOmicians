@@ -1,0 +1,43 @@
+pilercr v1.06
+By Robert C. Edgar
+
+genomes/FaecalibacteriumPrausnitzii.fasta: 1 putative CRISPR arrays found.
+
+
+
+DETAIL REPORT
+
+
+
+Array 1
+>gi|295102939|emb|FP929046.1| Faecalibacterium prausnitzii SL3/3 draft genome
+
+       Pos  Repeat     %id  Spacer  Left flank    Repeat                           Spacer
+==========  ======  ======  ======  ==========    =============================    ======
+   1590794      29    96.6      32  TCTTTTTAGT    -............................    TTGCGGTTCGTTTTGTACGATTAGCGTTCGCG
+   1590855      29   100.0      32  AGCGTTCGCG    .............................    CATGTGATAGTGTGGTCTTGCTGTCTGCTCTC
+   1590916      29    96.6      33  GTCTGCTCTC    ......................T......    TATGCATATGGCTGACTGCAAGCGTCAGGTGGC
+   1590978      29    96.6          GTCAGGTGGC    .....C.......................    CACAACACAGGGGTAGAATGCCATGGTGTCGCGC
+==========  ======  ======  ======  ==========    =============================
+         4      29              32                CCTTTTCCCCGCATACGCGGGGGTGATCC
+
+
+SUMMARY BY SIMILARITY
+
+
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer  +  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  =  =========
+    1  gi|295102939|emb     1590794         212         4      29      32  +  CCTTTTCCCCGCATACGCGGGGGTGATCC
+
+
+
+SUMMARY BY POSITION
+
+
+
+>gi|295102939|emb|FP929046.1| Faecalibacterium prausnitzii SL3/3 draft genome
+
+Array          Sequence    Position      Length  # Copies  Repeat  Spacer    Distance  Consensus
+=====  ================  ==========  ==========  ========  ======  ======  ==========  =========
+    1  gi|295102939|emb     1590794         212         4      29      32              CCTTTTCCCCGCATACGCGGGGGTGATCC

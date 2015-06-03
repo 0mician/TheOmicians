@@ -20,8 +20,11 @@ run the scripts of the pipeline.
 
 # Special Thanks
 
-A special thank you to the developer of
-[pilercr](http://www.drive5.com/pilercr/) for [licensing his
-code](http://www.drive5.com/piler/license.htm) under a public domain
-software license! Only an executable is attached to the project for
-the VM, but the code is available in the aforementioned links.
+A special thank you to the developers of
+[pilercr](http://www.drive5.com/pilercr/) and
+[SPAdes](http://bioinf.spbau.ru/spades) for licensing their code under
+a public domain software license! Only the executables are attached to
+the project for the VM, but the code is available in the
+aforementioned links.
+
+

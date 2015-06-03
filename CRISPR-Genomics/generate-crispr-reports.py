@@ -12,7 +12,6 @@ i = 1
 ##### Find CRISPR using pilercr #####
 for fn in os.listdir(genomePath):
     print "Generating report %i out of %i" % (i, number_of_files)
-    ### -trimseqs              Eliminate similar seqs from -seq file.
-    cmd = "/vagrant/pilercr1.06/pilercr -in %s -out %s -trimseqs -noinfo"%(genomePath + fn,pilerOut % fn)
+    cmd = "/vagrant/Tools/pilercr1.06/pilercr -noinfo -in %s -out %s"%(genomePath + fn,pilerOut % fn)
     os.system(cmd + "> /dev/null 2>&1") 
     i += 1
