@@ -20,9 +20,7 @@ run the scripts of the pipeline.
 
 # Special Thanks
 
-A special thank you to the developers of
-[pilercr](http://www.drive5.com/pilercr/) and
-[SPAdes](http://bioinf.spbau.ru/spades) for licensing their code under
+A special thank you to the developers of the tools mentioned in the [reference page](https://github.com/Milt0n/TheOmicians/blob/master/references.md) for licensing their code under
 a public domain software license! Only the executables are attached to
 the project for the VM, but the code is available in the
 aforementioned links.
