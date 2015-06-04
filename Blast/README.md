@@ -1,6 +1,6 @@
 # BLAST
 
-In this section, we will run a BLAST on all obtained spacers, using NCBI BLAST+ command line program available at [here](ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/) , to see if we can map the spacers back to phages and plasmids which their full genomes are available in NCBI nucleotide database.
+In this section, we will run a BLAST on all obtained spacers, using NCBI BLAST+ command line program available at ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ , to see if we can map the spacers back to phages and plasmids which their full genomes are available in NCBI nucleotide database.
 First we will download BLAST+ and the Nucleotide BLAST database, then we will extract spacers from pilercr reports and finally run a BLAST and analyse the results.
 
 ## 1.BLAST+ setup
@@ -23,7 +23,7 @@ $ ./BLAST-setup.sh
 
 ### 1.2.Nucleotide BLAST database download
 
-Now we need to download nucleotide BLAST database from [here](ftp://ftp.ncbi.nlm.nih.gov/blast/db/) .
+Now we need to download nucleotide BLAST database from ftp://ftp.ncbi.nlm.nih.gov/blast/db/ .
 This database is about 16GB, so make sure that you have enough space.
 The following script will download nucleotide BLAST database and extract it to /Tools/ncbi-blast/db/
 (If you don't have enough space, you can also run BLAST remotely)
